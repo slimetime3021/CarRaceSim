@@ -1,0 +1,199 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 20, 2026, 3:45:56 p.m.
+    Author     : deric
+*/
+
+.root-pane {
+    -fx-background-color: #e8f1fa;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.race-button {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-insets: 0;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0, 0, 1);
+}
+
+.start-button                { -fx-background-color: #1f8a3b; }
+.start-button:hover          { -fx-background-color: #27a548; }
+.start-button:pressed        { -fx-background-color: #187030; }
+
+.pause-button                { -fx-background-color: #1d6fd8; }
+.pause-button:hover          { -fx-background-color: #3585ea; }
+.pause-button:pressed        { -fx-background-color: #1558ad; }
+
+.reset-button                { -fx-background-color: #e53935; }
+.reset-button:hover          { -fx-background-color: #ef5350; }
+.reset-button:pressed        { -fx-background-color: #b71c1c; }
+
+/* ---------- Primary (welcome) screen ---------- */
+
+.welcome-pane {
+    -fx-background-color: linear-gradient(to bottom, #cfe4f8, #f7fbff);
+}
+
+.title-label {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e4f8f;
+    -fx-effect: dropshadow(gaussian, rgba(30, 79, 143, 0.25), 4, 0, 0, 2);
+}
+
+.car-showcase {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 12, 0, 0, 6);
+}
+
+.start-race-button {
+    -fx-font-size: 16px;
+    -fx-background-radius: 8;
+}
+
+/* ---------- Secondary (race) screen: track ---------- */
+
+.track {
+    -fx-background-color: #2f343b;
+}
+
+.track-edge {
+    -fx-stroke: white;
+    -fx-stroke-width: 3;
+}
+
+.lane-divider {
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+    -fx-stroke-dash-array: 10 8;
+    -fx-stroke-line-cap: round;
+}
+
+.side-label {
+    -fx-background-color: #1e7a34;
+    -fx-background-radius: 4;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.arrival-label {
+    -fx-background-color: #1e7a34;
+}
+
+/* ---------- Cars (built from polygons) ---------- */
+
+.car {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 6, 0, 0, 2);
+}
+
+.car-body {
+    -fx-stroke: black;
+    -fx-stroke-width: 1;
+}
+
+.car-blue   .car-body { -fx-fill: #1e63d6; }
+.car-red    .car-body { -fx-fill: #e53935; }
+.car-green  .car-body { -fx-fill: #2fae4f; }
+.car-yellow .car-body { -fx-fill: #f5b800; }
+
+.car-window {
+    -fx-fill: #a9d6f5;
+    -fx-stroke: #2c3e50;
+    -fx-stroke-width: 0.5;
+}
+
+.car-plate {
+    -fx-fill: white;
+    -fx-stroke: black;
+    -fx-stroke-width: 0.5;
+}
+
+.car-number {
+    -fx-fill: black;
+    -fx-font-size: 7px;
+    -fx-font-weight: bold;
+}
+
+.car-wheel {
+    -fx-fill: #1b1b1b;
+    -fx-stroke: #9aa0a6;
+    -fx-stroke-width: 1;
+}
+
+/* ---------- Secondary screen: bottom panels ---------- */
+
+.bottom-panel {
+    -fx-background-color: #e8f1fa;
+}
+
+.controls-panel {
+    -fx-padding: 10 0 0 0;
+}
+
+.section-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e4f8f;
+}
+
+.slider-row {
+    -fx-alignment: center-left;
+    -fx-spacing: 6;
+    -fx-padding: 0 0 0 10;
+}
+
+.slider .track {
+    -fx-background-color: #bcd3ee;
+    -fx-background-insets: 0;
+    -fx-background-radius: 4;
+}
+
+.slider .thumb {
+    -fx-background-color: #1d6fd8;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1em;
+    -fx-padding: 0.6em;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 1);
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #3585ea;
+}
+
+/* ---------- Secondary screen: results ---------- */
+
+.results-panel {
+    -fx-background-color: #eaf3fb;
+    -fx-background-radius: 8;
+    -fx-border-color: #b8d4ec;
+    -fx-border-radius: 8;
+    -fx-padding: 8;
+}
+
+.results-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e4f8f;
+}
+
+.place-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #1f3552;
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-radius: 4;
+}
+
+.place-1 { -fx-border-color: #f5b301; }   /* gold   */
+.place-2 { -fx-border-color: #9aa5b1; }   /* silver */
+.place-3 { -fx-border-color: #c9803a; }   /* bronze */
+.place-4 { -fx-border-color: #3f6fb5; }   /* blue   */

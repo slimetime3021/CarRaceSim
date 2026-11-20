@@ -5,19 +5,19 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derick.carracesim.PrimaryController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derick.carracesim.PrimaryController" styleClass="root-pane, welcome-pane" stylesheets="@styles.css">
    <top>
-      <Label text="Welcome" BorderPane.alignment="CENTER">
+      <Label styleClass="title-label" text="Welcome" BorderPane.alignment="CENTER">
          <padding>
             <Insets top="10.0" />
          </padding>
       </Label>
    </top>
    <center>
-      <Label fx:id="lblImage" BorderPane.alignment="CENTER" />
+      <Label fx:id="lblImage" styleClass="car-showcase" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
-      <Button fx:id="startRaceBtn" mnemonicParsing="false" onAction="#switchToRaceView" text="Start Race" BorderPane.alignment="CENTER">
+      <Button fx:id="startRaceBtn" mnemonicParsing="false" styleClass="race-button, start-button, start-race-button" onAction="#switchToRaceView" text="Start Race" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="50.0" />
          </BorderPane.margin>

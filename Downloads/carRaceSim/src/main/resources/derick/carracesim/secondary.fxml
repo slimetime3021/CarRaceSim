@@ -13,141 +13,141 @@
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derick.carracesim.SecondaryController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="derick.carracesim.SecondaryController" styleClass="root-pane" stylesheets="@styles.css">
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="track" BorderPane.alignment="CENTER">
          <children>
-            <Line endX="3.9999988079071045" endY="5.7220458984375E-6" startX="3.9999988079071045" startY="299.9999694824219" />
-            <Line endX="510.6666564941406" endY="-9.5367431640625E-6" startX="510.6665954589844" startY="299.9999694824219" />
-            <Line fx:id="carDividerLine1" endX="397.0" endY="-2.288818359375E-5" fill="WHITE" layoutX="119.0" layoutY="69.0" startX="-111.0" startY="-2.288818359375E-5" stroke="WHITE" style="-fx-stroke-dash-array: 5 5; -fx-stroke-width: 2; -fx-stroke-line-cap: round;" />
-            <Line fx:id="carDividerLine11" endX="517.3333129882812" endY="131.95956420898438" fill="WHITE" startX="5.999998569488525" startY="131.95956420898438" stroke="WHITE" style="-fx-stroke-dash-array: 5 5; -fx-stroke-width: 2; -fx-stroke-line-cap: round;" />
-            <Line fx:id="carDividerLine12" endX="516.6666870117188" endY="201.66665649414062" fill="WHITE" startX="5.999998569488525" startY="201.66665649414062" stroke="WHITE" style="-fx-stroke-dash-array: 5 5; -fx-stroke-width: 2; -fx-stroke-line-cap: round;" />
-            <Group fx:id="carBlue" layoutX="15" layoutY="20">
+            <Line styleClass="track-edge" endX="3.9999988079071045" endY="5.7220458984375E-6" startX="3.9999988079071045" startY="299.9999694824219" />
+            <Line styleClass="track-edge" endX="510.6666564941406" endY="-9.5367431640625E-6" startX="510.6665954589844" startY="299.9999694824219" />
+            <Line styleClass="lane-divider" fx:id="carDividerLine1" endX="397.0" endY="-2.288818359375E-5" layoutX="119.0" layoutY="69.0" startX="-111.0" startY="-2.288818359375E-5" />
+            <Line styleClass="lane-divider" fx:id="carDividerLine11" endX="517.3333129882812" endY="131.95956420898438" startX="5.999998569488525" startY="131.95956420898438" />
+            <Line styleClass="lane-divider" fx:id="carDividerLine12" endX="516.6666870117188" endY="201.66665649414062" startX="5.999998569488525" startY="201.66665649414062" />
+            <Group fx:id="carBlue" styleClass="car, car-blue" layoutX="15" layoutY="20">
                <children>
                   <!-- body -->
-                  <Polygon fill="BLUE" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" stroke="BLACK" strokeWidth="1.0" />
+                  <Polygon styleClass="car-body" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" />
                   <!-- rear window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
+                  <Polygon styleClass="car-window" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
                   <!-- front window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
+                  <Polygon styleClass="car-window" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
                   <!-- number plate -->
-                  <Polygon fill="WHITE" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" stroke="BLACK" strokeWidth="0.5" />
-                  <Text fill="BLACK" layoutX="30.5" layoutY="21.0" style="-fx-font-size: 7; -fx-font-weight: bold;" text="23" />
+                  <Polygon styleClass="car-plate" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" />
+                  <Text styleClass="car-number" layoutX="30.5" layoutY="21.0" text="23" />
                   <!-- wheels -->
-                  <Polygon fill="BLACK" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
-                  <Polygon fill="BLACK" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
+                  <Polygon styleClass="car-wheel" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" />
+                  <Polygon styleClass="car-wheel" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" />
                </children>
             </Group>
-            <Group fx:id="carRed" layoutX="15" layoutY="85">
+            <Group fx:id="carRed" styleClass="car, car-red" layoutX="15" layoutY="85">
                <children>
                   <!-- body -->
-                  <Polygon fill="RED" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" stroke="BLACK" strokeWidth="1.0" />
+                  <Polygon styleClass="car-body" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" />
                   <!-- rear window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
+                  <Polygon styleClass="car-window" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
                   <!-- front window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
+                  <Polygon styleClass="car-window" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
                   <!-- number plate -->
-                  <Polygon fill="WHITE" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" stroke="BLACK" strokeWidth="0.5" />
-                  <Text fill="BLACK" layoutX="30.5" layoutY="21.0" style="-fx-font-size: 7; -fx-font-weight: bold;" text="45" />
+                  <Polygon styleClass="car-plate" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" />
+                  <Text styleClass="car-number" layoutX="30.5" layoutY="21.0" text="45" />
                   <!-- wheels -->
-                  <Polygon fill="BLACK" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
-                  <Polygon fill="BLACK" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
+                  <Polygon styleClass="car-wheel" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" />
+                  <Polygon styleClass="car-wheel" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" />
                </children>
             </Group>
-            <Group fx:id="carGreen" layoutX="15" layoutY="152">
+            <Group fx:id="carGreen" styleClass="car, car-green" layoutX="15" layoutY="152">
                <children>
                   <!-- body -->
-                  <Polygon fill="LIMEGREEN" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" stroke="BLACK" strokeWidth="1.0" />
+                  <Polygon styleClass="car-body" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" />
                   <!-- rear window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
+                  <Polygon styleClass="car-window" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
                   <!-- front window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
+                  <Polygon styleClass="car-window" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
                   <!-- number plate -->
-                  <Polygon fill="WHITE" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" stroke="BLACK" strokeWidth="0.5" />
-                  <Text fill="BLACK" layoutX="30.5" layoutY="21.0" style="-fx-font-size: 7; -fx-font-weight: bold;" text="78" />
+                  <Polygon styleClass="car-plate" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" />
+                  <Text styleClass="car-number" layoutX="30.5" layoutY="21.0" text="78" />
                   <!-- wheels -->
-                  <Polygon fill="BLACK" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
-                  <Polygon fill="BLACK" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
+                  <Polygon styleClass="car-wheel" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" />
+                  <Polygon styleClass="car-wheel" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" />
                </children>
             </Group>
-            <Group fx:id="carYellow" layoutX="15" layoutY="235">
+            <Group fx:id="carYellow" styleClass="car, car-yellow" layoutX="15" layoutY="235">
                <children>
                   <!-- body -->
-                  <Polygon fill="GOLD" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" stroke="BLACK" strokeWidth="1.0" />
+                  <Polygon styleClass="car-body" points="0.0, 24.0, 0.0, 17.0, 8.0, 13.0, 21.0, 12.0, 28.0, 3.0, 49.0, 3.0, 57.0, 12.0, 68.0, 14.0, 70.0, 24.0" />
                   <!-- rear window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
+                  <Polygon styleClass="car-window" points="25.0, 12.0, 30.0, 5.0, 36.0, 5.0, 36.0, 12.0" />
                   <!-- front window -->
-                  <Polygon fill="LIGHTSKYBLUE" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
+                  <Polygon styleClass="car-window" points="39.0, 12.0, 39.0, 5.0, 47.0, 5.0, 53.0, 12.0" />
                   <!-- number plate -->
-                  <Polygon fill="WHITE" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" stroke="BLACK" strokeWidth="0.5" />
-                  <Text fill="BLACK" layoutX="30.5" layoutY="21.0" style="-fx-font-size: 7; -fx-font-weight: bold;" text="88" />
+                  <Polygon styleClass="car-plate" points="28.0, 15.0, 42.0, 15.0, 42.0, 22.0, 28.0, 22.0" />
+                  <Text styleClass="car-number" layoutX="30.5" layoutY="21.0" text="88" />
                   <!-- wheels -->
-                  <Polygon fill="BLACK" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
-                  <Polygon fill="BLACK" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" stroke="DARKGRAY" strokeWidth="1.0" />
+                  <Polygon styleClass="car-wheel" points="20.0, 25.0, 18.5, 28.5, 15.0, 30.0, 11.5, 28.5, 10.0, 25.0, 11.5, 21.5, 15.0, 20.0, 18.5, 21.5" />
+                  <Polygon styleClass="car-wheel" points="60.0, 25.0, 58.5, 28.5, 55.0, 30.0, 51.5, 28.5, 50.0, 25.0, 51.5, 21.5, 55.0, 20.0, 58.5, 21.5" />
                </children>
             </Group>
          </children>
       </Pane>
    </center>
    <left>
-      <Label maxWidth="1.0" minWidth="1.0" prefWidth="1.0" text="Starting" wrapText="true" BorderPane.alignment="CENTER">
+      <Label maxHeight="1.7976931348623157E308" maxWidth="28.0" minWidth="28.0" prefWidth="28.0" styleClass="side-label, start-label" text="Starting" wrapText="true" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets left="30.0" right="10.0" />
+            <Insets left="6.0" right="6.0" />
          </BorderPane.margin>
       </Label>
    </left>
    <right>
-      <Label maxWidth="1.0" minWidth="1.0" prefWidth="1.0" text="Arrival" wrapText="true" BorderPane.alignment="CENTER">
+      <Label maxHeight="1.7976931348623157E308" maxWidth="28.0" minWidth="28.0" prefWidth="28.0" styleClass="side-label, arrival-label" text="Arrival" wrapText="true" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets left="10.0" right="30.0" />
+            <Insets left="6.0" right="6.0" />
          </BorderPane.margin>
       </Label>
    </right>
    <bottom>
-      <HBox prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="160.0" prefWidth="200.0" styleClass="bottom-panel" BorderPane.alignment="CENTER">
          <children>
-            <VBox maxWidth="1.7976931348623157E308">
+            <VBox maxWidth="1.7976931348623157E308" styleClass="controls-panel">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
                <children>
                   <HBox maxWidth="1.7976931348623157E308">
                      <children>
-                        <Button fx:id="startRaceBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startRace" style="-fx-background-color: Green;" text="Start" textFill="WHITE">
+                        <Button fx:id="startRaceBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startRace" styleClass="race-button, start-button" text="Start">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="pauseRaceBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseRace" style="-fx-background-color: Blue;" text="Pause" textFill="WHITE">
+                        <Button fx:id="pauseRaceBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pauseRace" styleClass="race-button, pause-button" text="Pause">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="resetRaceBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetRace" style="-fx-background-color: Red;" text="Reset" textFill="WHITE">
+                        <Button fx:id="resetRaceBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetRace" styleClass="race-button, reset-button" text="Reset">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" />
                            </HBox.margin>
                         </Button>
                      </children>
                   </HBox>
-                  <HBox maxWidth="1.7976931348623157E308">
+                  <HBox maxWidth="1.7976931348623157E308" styleClass="slider-row">
                      <children>
-                        <Label text="Simulation Speed : " />
-                        <Slider fx:id="simSpeedSlider" majorTickUnit="25.0" max="2.0" min="0.5" minorTickCount="3" value="1.0" />
+                        <Label styleClass="section-label" text="Simulation Speed:" />
+                        <Slider fx:id="simSpeedSlider" prefWidth="110.0" majorTickUnit="25.0" max="2.0" min="0.5" minorTickCount="3" value="1.0" />
                      </children>
                   </HBox>
                </children>
             </VBox>
-            <VBox fx:id="resultsBox" prefWidth="330.0" spacing="4.0" style="-fx-background-color: #eaf3fb; -fx-border-color: #b8d4ec; -fx-padding: 8;">
+            <VBox fx:id="resultsBox" prefWidth="300.0" spacing="4.0" styleClass="results-panel">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" />
                </HBox.margin>
                <children>
-                  <Label fx:id="lblResultsTitle" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Race Results" />
-                  <Label fx:id="lblPlace1" style="-fx-font-size: 11;" text="1st  -" />
-                  <Label fx:id="lblPlace2" style="-fx-font-size: 11;" text="2nd  -" />
-                  <Label fx:id="lblPlace3" style="-fx-font-size: 11;" text="3rd  -" />
-                  <Label fx:id="lblPlace4" style="-fx-font-size: 11;" text="4th  -" />
+                  <Label fx:id="lblResultsTitle" styleClass="results-title" text="Race Results" />
+                  <Label fx:id="lblPlace1" maxWidth="1.7976931348623157E308" styleClass="place-label, place-1" text="1st  -" />
+                  <Label fx:id="lblPlace2" maxWidth="1.7976931348623157E308" styleClass="place-label, place-2" text="2nd  -" />
+                  <Label fx:id="lblPlace3" maxWidth="1.7976931348623157E308" styleClass="place-label, place-3" text="3rd  -" />
+                  <Label fx:id="lblPlace4" maxWidth="1.7976931348623157E308" styleClass="place-label, place-4" text="4th  -" />
                </children>
             </VBox>
          </children>
