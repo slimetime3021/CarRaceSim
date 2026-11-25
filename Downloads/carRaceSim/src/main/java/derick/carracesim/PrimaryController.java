@@ -17,6 +17,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
 /**
@@ -40,6 +42,10 @@ public class PrimaryController implements Initializable {
         "/images/blueCarSprite.png",
         "/images/yellowCarSprite.png"
     };
+    
+    private static final String THEME_FILE = "/audio/primaryViewTheme.mp3";
+    
+    private MediaPlayer themePlayer;
 
     private static final int DELAY_SECONDS = 10;
  
@@ -66,8 +72,25 @@ public class PrimaryController implements Initializable {
         carCycle.setCycleCount(Timeline.INDEFINITE);
         
         carCycle.play();
-    }    
+        
+        startTheme();
+    }
+    
+    private void startTheme() {
 
+        URL res = getClass().getResource(THEME_FILE);
+
+        if (res == null) {
+            throw new IllegalStateException("Missing audio: " + THEME_FILE);
+        }
+
+        themePlayer = new MediaPlayer(new Media(res.toExternalForm()));
+
+        themePlayer.setCycleCount(MediaPlayer.INDEFINITE);
+
+        themePlayer.play();
+    }
+    
     /**
      * Loads sprite at given index and sets it on lblImage
      * @param index the given index of the sprite
